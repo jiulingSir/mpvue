@@ -6,13 +6,12 @@
  
 
 
- 实现一个简单的	demo
+ 实现一个简单的	爬虫
 
->利用mpvue初始化的项目，进行实现一个简单的增删改查的列表demo,过程分为几个小步骤。
-	1. 创建一个todolist组件
-	2. 着手入口文件main.js
-	3. 新建一个入口组件todolist.vue
-	4. 实现todolist的业务逻辑
+>用mpvue与node实现一个获取豆瓣信息的爬虫功能。总共有几个步骤
+	1. 用小程序的扫码api，获取二维码的图书ID值；
+	2. 将其上传到本地server端，用node的https模块进行豆瓣信息的爬取；
+	3. 将获取的图书豆瓣信息写入到数据库中。 
 
 ``` bash
 # install dependencies
