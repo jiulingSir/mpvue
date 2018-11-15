@@ -5,8 +5,8 @@
   		<button size="mini" @click="submitEvent" class="todolist-button">添加</button>
   	</p>
   	 <ul class="todolist-list">
-        <li v-for="(item, index) in lists" wx:key="index" :key="index" class="todolist-list-item">
-          已添加:  {{item}} <span class="todolist-list-item-delete" @click="deleteItem(index)">删除</span>
+        <li v-for="(item, index) in lists" wx:key="index" :key="index">
+          {{index+1}}:  {{item}} <span @click="deleteItem(index)">删除</span>
         </li>
     </ul>
   </div>
@@ -52,23 +52,13 @@ export default {
 .todolist-input{
 	border:1px solid #ddd;
 	width:100px;
-	height:62rpx;
+	height:26px;
 }
 .todolist-button{
 	margin:0;
 }
-
 .todolist-list{
 	width: 50%;
 	margin:0 auto;
 }
-.todolist-list-item{
-  text-align: center;
-}
-.todolist-list-item-delete{
-  font-size:29rpx;
-margin-left:15rpx;
-}
-
-
 </style>
